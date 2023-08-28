@@ -9,27 +9,30 @@ import org.quarkus.samples.petclinic.owner.Pet;
 import org.quarkus.samples.petclinic.owner.PetType;
 import org.quarkus.samples.petclinic.vet.Vet;
 import org.quarkus.samples.petclinic.visit.Visit;
+import org.quarkus.samples.petclinic.system.Login;
 
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.TemplateInstance;
 
 @CheckedTemplate
 public class Templates {
-    public static native TemplateInstance welcome();
+    public static native TemplateInstance welcome(String email, String token);
 
     public static native TemplateInstance error(String message);
 
     public static native TemplateInstance vetList(List<Vet> vets);
 
-    public static native TemplateInstance findOwners(List<String> errors);
+    public static native TemplateInstance findOwners(List<String> errors, String email, String token);
 
     public static native TemplateInstance ownerDetails(Owner owner);
 
-    public static native TemplateInstance createOrUpdateOwnerForm(Owner owner, Map<String, String> errors);
+    public static native TemplateInstance createOrUpdateOwnerForm(Owner owner, Map<String, String> errors, String email, String token);
 
     public static native TemplateInstance ownersList(Collection<Owner> owners);
 
     public static native TemplateInstance createOrUpdatePetForm(Owner owner, Pet pet, List<PetType> petTypes, Map<String, String> errors);
 
     public static native TemplateInstance createOrUpdateVisitForm(Pet pet, Visit visit, Map<String, String> errors);
+
+    public static native TemplateInstance enterLoginForm(Login login, Map<String, String> errors);
 }

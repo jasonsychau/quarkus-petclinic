@@ -91,5 +91,15 @@
         </div>
     </div>
 </form>
+<div hidden id="email">{email}</div>
+<div hidden id="token">{token}</div>
+<script>
+    let givenEmail = document.getElementById("email").innerText;
+    let givenToken = document.getElementById("token").innerText;
+    if (givenEmail && givenEmail.length > 0 && givenToken && givenToken.length > 0) {
+      document.cookie = "email="+givenEmail;
+      document.cookie = "sessionToken="+givenToken;
+    }
+</script>
 {/body}
 {/include}
