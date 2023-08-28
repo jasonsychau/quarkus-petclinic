@@ -1,5 +1,0 @@
-META-INF/panache-archive.marker
-org/quarkus/samples/petclinic/OwnersResourceIT.class
-org/quarkus/samples/petclinic/VetsResourceIT.class
-org/quarkus/samples/petclinic/VetsResourceTest.class
-org/quarkus/samples/petclinic/OwnersResourceTest.class
