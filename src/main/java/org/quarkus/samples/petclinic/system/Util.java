@@ -69,9 +69,8 @@ public class Util {
 
         Collection<Login> matchingAccounts = Login.findByEmail(email);
         if (matchingAccounts.isEmpty()) {
-            // create account
+        // create account
             String pwHash = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-            System.out.println(String.format("HELLO JASON, HERE IS THE PASSWORD HASH FOR %s: %s", password, pwHash));
             feedback.put("email", "Account not found");
             return feedback;
         } else {

@@ -52,8 +52,8 @@ INSERT INTO visits(id, pet_id, visit_date, description) VALUES (1001, 1007, '201
 	(1003, 1008, '2013-01-03', 'neutered'),
 	(1004, 1007, '2013-01-04', 'spayed');
 
--- jasonsychau@gmail.com pw is 'helloworld'
--- demo@example.com pw is 'abcpassword'
-INSERT INTO accounts(id, email, password) VALUES
-	(0, 'jasonsychau@gmail.com', '$2a$12$tb8pdosbnbGJDTVImeVwQe7kFFcsVNknWgunM4m01iOiJLED4gLme'),
-	(1, 'demo@example.com', '$2a$12$uAtTV0bLLvyFvlWjNGHbNeYsA265xjIXcGMkGND2L2S0bgI8zinU.');
+-- jasonsychau@gmail.com pw is 'changeme'
+-- demo@example.com pw is 'changeme'
+INSERT INTO users(id, email, password) VALUES
+	(0, 'jasonsychau@gmail.com', '$2a$12$OQ1CE6Qr2z2KJsA/KP803OPvUQjL2yG8I6iMuC6CIznxNCuIAxaly'),
+	(1, 'demo@example.com', '$2a$12$aKS2/OqaxtV3RTLX/1kMy.xweLadps5xDWCgawTCQilsWGnNJiyzC');

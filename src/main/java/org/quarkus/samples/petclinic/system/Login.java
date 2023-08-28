@@ -14,7 +14,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import io.quarkus.qute.TemplateExtension;
 
 @Entity
-@Table(name = "accounts",
+@Table(name = "users",
 		uniqueConstraints = @UniqueConstraint(columnNames={"email"}))
 public class Login extends PanacheEntity {
 
